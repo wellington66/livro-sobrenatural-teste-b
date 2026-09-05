@@ -328,6 +328,12 @@ section{ padding: 96px 0; position:relative; }
 .test-text{ font-style: italic; color: hsl(var(--foreground)); line-height:1.65; font-size:14.5px; margin:14px 0 18px; }
 .test-name{ font-family:'Playfair Display',serif; font-weight:600; font-size:15px; }
 .test-role{ font-size:12.5px; color: hsl(var(--muted-foreground)); }
+.test-grid-photos{ grid-template-columns: 1fr; }
+@media (min-width:640px){ .test-grid-photos{ grid-template-columns: repeat(2,1fr); } }
+@media (min-width:1024px){ .test-grid-photos{ grid-template-columns: repeat(4,1fr); } }
+.test-card-photo{ padding:0; overflow:hidden; box-shadow: 0 10px 25px -10px rgba(0,0,0,.15); transition: transform .3s ease, box-shadow .3s ease; }
+.test-card-photo:hover{ transform: translateY(-6px); box-shadow: 0 20px 35px -12px rgba(0,0,0,.22); }
+.test-card-photo img{ display:block; width:100%; height:auto; }
 .big-number{ text-align:center; margin-top:56px; }
 .big-number .num{ font-family:'Playfair Display',serif; font-size:44px; font-weight:700; color: hsla(42,75%,55%,.5); }
 .big-number .lbl{ color: hsl(var(--muted-foreground)); margin-top:4px; }
@@ -613,27 +619,18 @@ footer{ background: hsl(var(--teal-dark)); color: hsla(40,30%,96%,.65); text-ali
       <div class="eyebrow">Vidas transformadas</div>
       <h2>O Que Leitores <span class="gold">Dizem</span></h2>
     </div>
-    <div class="test-grid">
-      <div class="test-card reveal">
-        <span class="quote-mark">"</span>
-        <div class="stars">★★★★★</div>
-        <p class="test-text">"Este livro mudou completamente minha forma de ver a realidade. Depois de 3 meses praticando as meditações, minha ansiedade crônica simplesmente desapareceu."</p>
-        <div class="test-name">Maria Clara S.</div>
-        <div class="test-role">Psicóloga, São Paulo</div>
+    <div class="test-grid test-grid-photos">
+      <div class="test-card test-card-photo reveal">
+        <img src="assets/depoimento-mariaclara.jpeg" alt="Depoimento de Maria Clara S. sobre o livro Como Se Tornar Sobrenatural">
       </div>
-      <div class="test-card reveal">
-        <span class="quote-mark">"</span>
-        <div class="stars">★★★★★</div>
-        <p class="test-text">"Eu era cético, mas os resultados falam por si. Minha saúde melhorou drasticamente e consegui manifestar oportunidades que pareciam impossíveis."</p>
-        <div class="test-name">Roberto M.</div>
-        <div class="test-role">Empresário, Rio de Janeiro</div>
+      <div class="test-card test-card-photo reveal">
+        <img src="assets/depoimento-roberto.jpeg" alt="Depoimento de Roberto M. sobre o livro Como Se Tornar Sobrenatural">
       </div>
-      <div class="test-card reveal">
-        <span class="quote-mark">"</span>
-        <div class="stars">★★★★★</div>
-        <p class="test-text">"Li mais de 200 livros de autoajuda. Este é diferente. A base científica dá uma credibilidade que nenhum outro livro do gênero consegue oferecer."</p>
-        <div class="test-name">Ana Beatriz L.</div>
-        <div class="test-role">Professora, Curitiba</div>
+      <div class="test-card test-card-photo reveal">
+        <img src="assets/depoimento-anabeatriz.jpeg" alt="Depoimento de Ana Beatriz L. sobre o livro Como Se Tornar Sobrenatural">
+      </div>
+      <div class="test-card test-card-photo reveal">
+        <img src="assets/depoimento-carla.jpeg" alt="Depoimento de Carla N. sobre o livro Como Se Tornar Sobrenatural">
       </div>
     </div>
     <div class="big-number reveal">
